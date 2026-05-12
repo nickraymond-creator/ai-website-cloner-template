@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { StripeLogo, TwitterIcon, LinkedInIcon, FacebookIcon, GlobeIcon } from "./icons";
+import { TwitterIcon, LinkedInIcon, FacebookIcon, GlobeIcon } from "./icons";
 
 type FooterLink = {
   label: string;
@@ -129,8 +129,17 @@ export function Footer() {
           style={{ borderBottom: "1px solid rgba(255,255,255,0.1)" }}
         >
           {/* Logo */}
-          <Link href="#" aria-label="Stripe home">
-            <StripeLogo size={60} style={{ color: "#FFFFFF" }} />
+          <Link href="#" aria-label="Stripe home" style={{ textDecoration: "none" }}>
+            <span style={{
+              fontFamily: "var(--font-inter), 'Helvetica Neue', Arial, sans-serif",
+              fontWeight: 800,
+              fontSize: "24px",
+              letterSpacing: "-0.03em",
+              color: "#FFFFFF",
+              lineHeight: 1,
+            }}>
+              stripe
+            </span>
           </Link>
 
           {/* Locale selector */}

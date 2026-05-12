@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { StripeLogo, ChevronDownIcon, MenuIcon } from "./icons";
+import { ChevronDownIcon, MenuIcon } from "./icons";
 
 const NAV_LINKS = [
   { label: "Products", hasChevron: true },
@@ -55,14 +55,24 @@ export function Navbar() {
         }}
       >
         {/* Logo */}
-        <a href="/" aria-label="Stripe home">
-          <StripeLogo
+        <a
+          href="/"
+          aria-label="Stripe home"
+          style={{ textDecoration: "none" }}
+        >
+          <span
             style={{
-              width: "64px",
+              fontFamily: "var(--font-inter), 'Helvetica Neue', Arial, sans-serif",
+              fontWeight: 800,
+              fontSize: "22px",
+              letterSpacing: "-0.03em",
               color: scrolled ? "#0A2540" : "#FFFFFF",
               transition: "color 0.2s ease",
+              lineHeight: 1,
             }}
-          />
+          >
+            stripe
+          </span>
         </a>
 
         {/* Desktop nav links */}
